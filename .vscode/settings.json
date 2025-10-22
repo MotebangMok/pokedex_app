@@ -1,0 +1,9 @@
+{
+  "dart.flutterSdkPath": ".fvm/versions/3.35.6",
+  "flutterTools.displayGetxContextMenu": false,
+  "flutterTools.displayMobxContextMenu": false,
+  "flutterTools.displayRiverpodContextMenu": true,
+  "flutterTools.displayModularContextMenu": false,
+  "editor.formatOnSave": true
+
+}
