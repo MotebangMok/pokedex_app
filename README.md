@@ -2,6 +2,12 @@
 
 A cross-platform Pokédex application built with Flutter, showcasing MVVM architecture, clean code principles, and modern Flutter development practices.
 
+## App preview
+
+![Splash](screenshots/splash_screen_light.png "Splash")
+![Home](screenshots/home_list_light.png "Home")
+![okemon Detail](screenshots/pokemon_detail_page_light.png "Pokemon Detail")
+
 
 ## Features
 
