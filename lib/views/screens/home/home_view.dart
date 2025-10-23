@@ -141,12 +141,12 @@ class _HomeViewState extends ConsumerState<HomeView> {
         IconButton(
           icon: const Icon(Icons.logout),
           onPressed: () async {
+            final navigator = Navigator.of(context);
             await ref.read(authViewModelProvider.notifier).signOut();
-            if (mounted) {
-              Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (_) => const LoginView()),
-              );
-            }
+            if (!mounted) return;
+            navigator.pushReplacement(
+              MaterialPageRoute(builder: (_) => const LoginView()),
+            );
           },
         ),
       ],
