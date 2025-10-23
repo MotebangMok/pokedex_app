@@ -13,7 +13,10 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        return macos;
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for windows - '
+          'you can reconfigure this by running the FlutterFire CLI again.',
+        );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -54,15 +57,6 @@ class DefaultFirebaseOptions {
     messagingSenderId: '239862593499',
     projectId: 'pokedex-test-app',
     storageBucket: 'pokedex-test-app.firebasestorage.app',
-    iosBundleId: 'com.example.pokedexTestApp',
-  );
-
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDummy-Key-For-Development',
-    appId: '1:1234567890:ios:abcdef1234567890',
-    messagingSenderId: '1234567890',
-    projectId: 'pokedex-app-demo',
-    storageBucket: 'pokedex-app-demo.appspot.com',
     iosBundleId: 'com.example.pokedexTestApp',
   );
 }
