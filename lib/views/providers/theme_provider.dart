@@ -18,17 +18,17 @@ class ThemeNotifier extends StateNotifier<ThemeMode> {
     }
   }
 
-  Future<void> toggleTheme(bool isOn) async {
+  Future<void> toggleTheme() async {
     final isDarkMode = state == ThemeMode.dark;
     if (isDarkMode) {
       state = ThemeMode.light;
     } else {
       state = ThemeMode.dark;
     }
-    await localDataSource.saveThemeMode(isOn);
+    await localDataSource.saveThemeMode(!isDarkMode);
   }
-
-  final themeProvider = StateNotifierProvider<ThemeNotifier, ThemeMode>((ref) {
-    return ThemeNotifier(getIt<LocalDataSource>());
-  });
 }
+
+final themeProvider = StateNotifierProvider<ThemeNotifier, ThemeMode>((ref) {
+  return ThemeNotifier(getIt<LocalDataSource>());
+});
