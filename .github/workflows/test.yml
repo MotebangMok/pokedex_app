@@ -36,10 +36,3 @@ jobs:
 
       - name: Run unit tests
         run: flutter test --coverage
-
-      - name: Upload coverage to Codecov (optional)
-        uses: codecov/codecov-action@v4
-        if: success()
-        with:
-          files: ./coverage/lcov.info
-          fail_ci_if_error: false
