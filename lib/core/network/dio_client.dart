@@ -5,12 +5,12 @@ import 'package:pokedex_app/core/constants/api_constants.dart';
 class DioClient {
   late final Dio _dio;
 
-  DioClient(){
+  DioClient() {
     _dio = Dio(
       BaseOptions(
         baseUrl: ApiConstants.baseUrl,
-        connectTimeout: const Duration(seconds: 30),
-        receiveTimeout: const Duration(seconds: 30),
+        connectTimeout: const Duration(seconds: 20),
+        receiveTimeout: const Duration(seconds: 20),
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
@@ -18,14 +18,15 @@ class DioClient {
       ),
     );
 
-    _dio.interceptors.add(LogInterceptor(
-      requestHeader: true,
-      responseBody: true,
-      requestBody: true,
-      logPrint: (object) => debugPrint(object.toString(),
-    ),),);
-    
+    _dio.interceptors.add(
+      LogInterceptor(
+        requestHeader: true,
+        responseBody: true,
+        requestBody: true,
+        logPrint: (object) => debugPrint(object.toString()),
+      ),
+    );
   }
 
-  Dio get dio=>_dio;
+  Dio get dio => _dio;
 }
