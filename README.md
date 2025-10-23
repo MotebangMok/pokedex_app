@@ -4,11 +4,35 @@ A cross-platform Pokédex application built with Flutter, showcasing MVVM archit
 
 ## App preview
 
-![Splash](screenshots/splash_screen_light.png "Splash")
-![Home](screenshots/home_list_light.png "Home")
-![okemon Detail](screenshots/pokemon_detail_page_light.png "Pokemon Detail")
+### Light Mode
 
+<div align="center">
+  <img src="screenshots/Simulator Screenshot - iPhone 11 - 2025-10-23 at 14.26.45.png" width="250" alt="Splash Screen"/>
+  <img src="screenshots/Simulator Screenshot - iPhone 11 - 2025-10-23 at 14.26.47.png" width="250" alt="Login Screen"/>
+  <img src="screenshots/Simulator Screenshot - iPhone 11 - 2025-10-23 at 14.49.02.png" width="250" alt="Register Screen"/>
+</div>
 
+<div align="center">
+  <img src="screenshots/Simulator Screenshot - iPhone 11 - 2025-10-23 at 14.27.08.png" width="250" alt="Home - Pokemon List"/>
+  <img src="screenshots/Simulator Screenshot - iPhone 11 - 2025-10-23 at 14.27.11.png" width="250" alt="Pokemon Detail - Ivysaur"/>
+  <img src="screenshots/Simulator Screenshot - iPhone 11 - 2025-10-23 at 14.27.16.png" width="250" alt="Pokemon Detail - Charizard"/>
+</div>
+
+<div align="center">
+  <img src="screenshots/Simulator Screenshot - iPhone 11 - 2025-10-23 at 14.48.51.png" width="250" alt="Favorites Screen"/>
+</div>
+
+### Dark Mode
+
+<div align="center">
+  <img src="screenshots/Simulator Screenshot - iPhone 11 - 2025-10-23 at 14.49.22.png" width="250" alt="Home - Dark Mode"/>
+  <img src="screenshots/Simulator Screenshot - iPhone 11 - 2025-10-23 at 14.49.26.png" width="250" alt="Pokemon Detail - Dark Mode"/>
+  <img src="screenshots/Simulator Screenshot - iPhone 11 - 2025-10-23 at 14.49.30.png" width="250" alt="Favorites - Dark Mode"/>
+</div>
+
+<div align="center">
+  <img src="screenshots/Simulator Screenshot - iPhone 11 - 2025-10-23 at 14.49.46.png" width="250" alt="Search Feature - Dark Mode"/>
+</div>
 ## Features
 
 - **Authentication**: Firebase Authentication with email/password
