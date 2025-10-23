@@ -298,4 +298,42 @@ void main() {
       timeout: const Timeout(Duration(seconds: 15)),
     );
   });
+
+  group('favourites', () {
+    test('should add pokemon to favourites', () async {
+      when(
+        mockLocalDataSource.addFavourite(any),
+      ).thenAnswer((_) async => Future.value());
+
+      final result = await repository.addFavourite(1);
+
+      expect(result.isRight(), true);
+      verify(mockLocalDataSource.addFavourite(1)).called(1);
+    });
+
+    test('should remove pokemon from favourites', () async {
+      when(
+        mockLocalDataSource.removeFavourite(any),
+      ).thenAnswer((_) async => Future.value());
+
+      final result = await repository.removeFavourite(1);
+
+      expect(result.isRight(), true);
+      verify(mockLocalDataSource.removeFavourite(1)).called(1);
+    });
+
+    test('should return list of favourite pokemon ids', () async {
+      when(
+        mockLocalDataSource.getFavourites(),
+      ).thenAnswer((_) async => [1, 2, 3]);
+
+      final result = await repository.getFavourites();
+
+      expect(result.isRight(), true);
+      result.fold((failure) => fail('Should not return failure'), (favourites) {
+        expect(favourites.length, 3);
+        expect(favourites, [1, 2, 3]);
+      });
+    });
+  });
 }
