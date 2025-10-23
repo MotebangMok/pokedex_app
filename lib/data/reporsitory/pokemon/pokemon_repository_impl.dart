@@ -10,7 +10,7 @@ import 'package:pokedex_app/domain/entities/pokemon_list_item.dart';
 class PokemonRepositoryImpl implements PokemonRepository {
   final PokemonRemoteDataSource remoteDataSource;
   final LocalDataSource localDataSource;
-  static const Duration _timeout = Duration(seconds: 30);
+  static const Duration _timeout = Duration(seconds: 10);
 
   PokemonRepositoryImpl({
     required this.remoteDataSource,
@@ -24,10 +24,7 @@ class PokemonRepositoryImpl implements PokemonRepository {
   }) async {
     try {
       final result = await remoteDataSource
-          .getPokemonList(
-            limit: limit,
-            offset: offset,
-          )
+          .getPokemonList(limit: limit, offset: offset)
           .timeout(
             _timeout,
             onTimeout: () {
