@@ -149,6 +149,18 @@ The app follows the Model-View-ViewModel (MVVM) pattern:
    flutter run -d ios           # iOS (macOS only)
    ```
 
+## Testing
+
+### Run Unit Tests
+```bash
+flutter test test/data/repository
+```
+
+### Run All Tests
+```bash
+flutter test
+```
+
 
 ## Features in Detail
 
